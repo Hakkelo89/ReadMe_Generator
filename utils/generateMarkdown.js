@@ -11,6 +11,7 @@ const renderLicenseLink = (license) => {};
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+//This function generate text based on input
 const generateMarkdown = (data) => {
   const {
     title,
@@ -25,8 +26,8 @@ const generateMarkdown = (data) => {
     github,
   } = data;
 
+  //Dynamically render GitHub profile URL
   const githubProfile = `https.//github.com/${github}`;
-  console.log("hello generated markdown");
   return `# ${title}
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
   
