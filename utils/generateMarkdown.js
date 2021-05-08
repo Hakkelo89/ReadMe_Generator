@@ -74,7 +74,7 @@ const generateMarkdown = (data) => {
   } = data;
 
   //Dynamically render GitHub profile URL
-  const githubProfile = `https.//github.com/${github}`;
+  const githubProfile = `https://github.com/${github}`;
   return `# ${title}
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
   
@@ -112,7 +112,7 @@ const generateMarkdown = (data) => {
   ## Questions
   If you have any questions regarding this app, please contact me via:
   - Email at ${email}
-  - GitHub at <${githubProfile}>`;
+  - GitHub at ${githubProfile}`;
 };
 
 module.exports = generateMarkdown;
