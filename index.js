@@ -4,10 +4,10 @@
 const questions = [];
 
 // TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {};
+function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-const init = () => {};
+function init() {}
 
 // Function call to initialize app
 init();
