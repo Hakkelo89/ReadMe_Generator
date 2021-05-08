@@ -3,23 +3,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generatedMarkdown = require("./utils/generateMarkdown");
 const createGeneratedFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 const questions = [
-  {
-    type: "input",
-    message: "Please Choose a file name",
-    name: "filename",
-  },
-
-  {
-    type: "list",
-    message: "Please choose a file extension",
-    name: "extension",
-    choices: ["md", "txt"],
-  },
   {
     type: "input",
     message: "Please type in the title of your project",
