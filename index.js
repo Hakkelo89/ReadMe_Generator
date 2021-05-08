@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -48,14 +48,14 @@ const questions = [
     type: "input",
     message:
       "If applicable, please type in all the contributors on this project:",
-    name: "",
+    name: "contributors",
   },
 
   {
     type: "input",
     message:
       "Please provide any test instructions. If not applicable, leave blank.",
-    name: "",
+    name: "test",
   },
 
   {
@@ -71,13 +71,21 @@ const questions = [
   },
 ];
 
+const promptUser = () => inquirer.prompt(questions);
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-const init = () => {
+const init = async () => {
   console.log("questions");
-  generateMarkdown();
+  try {
+    const answers = await promptUser();
+    generateMarkdown(answers);
+    console.log();
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 // Function call to initialize app
