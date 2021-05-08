@@ -78,7 +78,7 @@ function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 const init = async () => {
-  console.log("questions");
+  console.log(questions);
   try {
     const answers = await promptUser();
     generateMarkdown(answers);

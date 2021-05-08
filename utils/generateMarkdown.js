@@ -21,6 +21,12 @@ const generateMarkdown = (data) => {
     
   ## Table of Contents
   - [Description](#Description)
+  - [Usage](#Usage)
+  - [Installation](#Installation)
+  - [License](#License)
+  - [Contributors](#Contributors)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
   
   ## Usage
     ${data.usage}
