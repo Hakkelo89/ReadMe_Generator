@@ -33,20 +33,6 @@ const getLicenseLink = (license) => {
   }
 };
 
-const renderLicenseSection = (license) => {
-  const licenseLink = getLicenseLink(license);
-  if (license !== "None") {
-    return `
-## License
-This project is licensed under the ${license} license.
-
-For further information about this license, see [here](${licenseLink}).
-`;
-  } else {
-    return "";
-  }
-};
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 const renderLicenseLink = (license) => {};
@@ -112,7 +98,7 @@ const generateMarkdown = (data) => {
   ## Questions
   If you have any questions regarding this app, please contact me via:
   - Email at ${email}
-  - GitHub at ${githubProfile}`;
+  - GitHub at <${githubProfile}>`;
 };
 
 module.exports = generateMarkdown;
