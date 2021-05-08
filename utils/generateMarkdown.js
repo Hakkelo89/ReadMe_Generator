@@ -1,6 +1,51 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const renderLicenseBadge = (license) => {};
+const renderLicenseBadge = (license) => {
+  if (license !== "None") {
+    return `
+![${license} badge](https://img.shields.io/badge/license-${license}-green)
+`;
+  } else {
+    return "";
+  }
+};
+
+const getLicenseLink = (license) => {
+  switch (license) {
+    case "MIT":
+      return "https://opensource.org/licenses/MIT";
+      break;
+    case "APACHE_2.0":
+      return "https://opensource.org/licenses/Apache-2.0";
+      break;
+    case "GPL_3.0":
+      return "https://www.gnu.org/licenses/gpl-3.0.en.html";
+      break;
+    case "BSD_3":
+      return "https://opensource.org/licenses/BSD-3-Clause";
+      break;
+    case "None":
+      return "";
+      break;
+    default:
+      return "";
+      break;
+  }
+};
+
+const renderLicenseSection = (license) => {
+  const licenseLink = getLicenseLink(license);
+  if (license !== "None") {
+    return `
+## License
+This project is licensed under the ${license} license.
+
+For further information about this license, see [here](${licenseLink}).
+`;
+  } else {
+    return "";
+  }
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
