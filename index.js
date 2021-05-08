@@ -18,7 +18,7 @@ const questions = [
     type: "list",
     message: "Please select a license",
     name: "badge",
-    choices: ["Apache", "IBM", "MIT", "Peri", "No licence"],
+    choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
   },
 
   {
@@ -77,6 +77,12 @@ const questions = [
     type: "input",
     message: "Please provide your email address",
     name: "email",
+    validate: function (email) {
+      // Regex mail check
+      return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+        email
+      );
+    },
   },
 
   {
