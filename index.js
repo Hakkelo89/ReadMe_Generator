@@ -3,9 +3,22 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
+const createGeneratedFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 const questions = [
+  {
+    type: "input",
+    message: "Please Choose a file name",
+    name: "filename",
+  },
+
+  {
+    type: "list",
+    message: "Please choose a file extension",
+    name: "extension",
+    choices: ["md", "txt"],
+  },
   {
     type: "input",
     message: "Please type in the title of your project",
@@ -41,7 +54,7 @@ const questions = [
     type: "input",
     message:
       "Please provide a description of the badge used for this application:",
-    name: "lincense",
+    name: "license",
   },
 
   {
@@ -81,8 +94,9 @@ const init = async () => {
   console.log(questions);
   try {
     const answers = await promptUser();
-    generateMarkdown(answers);
-    console.log();
+    const generatedData = generatedMarkdown(answers);
+    await createGeneratedFile("Generated_README.md", generatedData);
+    console.log("File is generated!");
   } catch (err) {
     console.log(err);
   }

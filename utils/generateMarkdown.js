@@ -12,12 +12,26 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
-  const githubProfile = `https.//github.com/${data.github}`;
+  const {
+    title,
+    badge,
+    description,
+    usage,
+    installation,
+    license,
+    contributors,
+    test,
+    email,
+    github,
+  } = data;
+
+  const githubProfile = `https.//github.com/${github}`;
   console.log("hello generated markdown");
-  const generatedData = `# ${data.title}
-  ![${data.badge}](https://img.shields.io/badge/license-${data.badge}-green)
+  return `# ${title}
+  ![${badge}](https://img.shields.io/badge/license-${badge}-green)
+  
   ## Description
-    ${data.description}
+    ${description}
     
   ## Table of Contents
   - [Description](#Description)
@@ -29,26 +43,25 @@ const generateMarkdown = (data) => {
   - [Questions](#Questions)
   
   ## Usage
-    ${data.usage}
+    ${usage}
     
   ## Installation
-    ${data.installation}
+    ${installation}
   
   ## License
-    ${data.badge}
-    ${data.license}
+    ${badge}
+    ${license}
   
   ## Contributors
-    ${data.contributors}
+    ${contributors}
     
   ## Tests
-    ${data.test}
+    ${test}
     
   ## Questions
   If you have any questions regarding this app, please contact me via:
-  - Email at ${data.email}
+  - Email at ${email}
   - GitHub at <${githubProfile}>`;
-  console.log(generatedData);
 };
 
 module.exports = generateMarkdown;
