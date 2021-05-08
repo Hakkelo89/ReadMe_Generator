@@ -20,6 +20,8 @@ const generateMarkdown = (data) => {
     usage,
     installation,
     license,
+    screenshot,
+    altText,
     contributors,
     test,
     email,
@@ -53,6 +55,9 @@ const generateMarkdown = (data) => {
     ${badge}
     ${license}
   
+  ## Screenshot
+   ![${altText}](${screenshot})
+
   ## Contributors
     ${contributors}
     
