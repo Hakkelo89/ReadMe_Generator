@@ -1,8 +1,8 @@
 # ReadMe Generator
-  ![MIT](https://img.shields.io/badge/license-MIT-green)
+  ![APACHE_2.0](https://img.shields.io/badge/license-APACHE_2.0-green)
   
   ## Description
-    Auto generated readme
+    Auto generated ReadMe
     
   ## Table of Contents
   - [Description](#Description)
@@ -14,23 +14,22 @@
   - [Questions](#Questions)
   
   ## Usage
-    Usege of the dynamic objects
+    Usege of the dynamic objects 
     
   ## Installation
     npm init
   
   ## License
-    MIT
-    Lorem Ipsum
+    [![License](https://img.shields.io/badge/License-APACHE%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
   
   ## Screenshot
-   ![Node Js](https://nodejs.org/static/images/logo.svg)
+   ![Node Js Logo](https://nodejs.org/static/images/logo.svg)
 
   ## Contributors
-    University of Birmingham Bootcamp
+    Universty of Birmingham Bootcamp
     
   ## Tests
-    No tests available
+    Tests are not available
     
   ## Questions
   If you have any questions regarding this app, please contact me via:
