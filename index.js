@@ -46,13 +46,6 @@ const init = async () => {
     {
       type: "input",
       message:
-        "Please provide a description of the badge used for this application:",
-      name: "license",
-    },
-
-    {
-      type: "input",
-      message:
         "Please please add a link of a screenshot that captures your working application:",
       name: "screenshot",
     },
